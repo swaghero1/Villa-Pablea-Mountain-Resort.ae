@@ -419,7 +419,6 @@
     max-height: 250px;
   }
 } 
-
 .wedding-section {
   background: url('weddingpic.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -429,10 +428,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 60px 40px; /* Increased top padding to raise the text */
+  padding: 60px 40px; /* Increased padding for better positioning */
   box-sizing: border-box;
 }
 
+/* Wedding Quote Styling */
 .wedding-quote {
   font-family: "Times New Roman", serif;
   font-style: italic;
@@ -440,16 +440,30 @@
   color: white;
   text-align: right;
   margin-bottom: 60px; /* Moves it a bit higher from the bottom */
+  max-width: 80%; /* Prevents text from stretching too wide */
 }
 
-/* Responsive adjustment */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .wedding-quote {
     font-size: 24px; 
     margin-bottom: 40px;
+    max-width: 90%; /* Slightly reduce width */
   }
-} 
+}
 
+@media (max-width: 480px) {
+  .wedding-section {
+    background-attachment: scroll; /* Fixes scroll effect for mobile */
+    padding: 40px 20px; /* Adjust padding for small screens */
+  }
+
+  .wedding-quote {
+    font-size: 20px; /* Scale text for smaller screens */
+    margin-bottom: 30px;
+    text-align: center; /* Center-align for better readability */
+  }
+}
 
     </style>
 </head>
@@ -520,7 +534,7 @@
   </div>
 </div>
 
-<a href="#" class="explore-btn-side">Checgi Prices</a>
+<a href="#" class="explore-btn-side">Check Prices</a>
 
 </section> 
 
