@@ -1,0 +1,431 @@
+ 
+.hero-section {
+  background-image: url('resort13`.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Or whatever height you want */
+  position: relative;
+  color: white; /* Make sure text is visible */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* On small screens, reduce overlay or remove */
+@media (max-width: 600px) { 
+     body {
+    background: none;
+  }
+ 
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.8rem; /* smaller font */
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    background: none;
+  }
+
+  .hero-section {
+    background: url('resort10.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;  /* Fix for mobile */
+    min-height: 100vh;
+    position: relative;
+  }
+}
+
+@media (max-width: 375px) { 
+     body {
+    background: none;
+  }
+  .hero-section {
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;  /* Fix for small phones */
+  }
+} 
+
+
+
+
+
+
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.6);
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+        .hero-text {
+            position: absolute;
+            top: 45%;
+            left: 3%;
+            transform: translateY(-50%);
+            font-size: 80px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+        .quote-text {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+            font-size: 20px;
+            font-family: "Lucida Handwriting", cursive;
+            font-style: italic;
+        }
+        .explore-btn {
+            position: absolute;
+            top: 70%;
+            left: 5%;
+            padding: 12px 24px;
+            font-size: 24px;
+            font-family: Helvetica, sans-serif;
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .explore-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .explore-btn::after {
+            content: '→'; /* Adds an arrow */
+            font-size: 28px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 50px;
+                left: 5%;
+            }
+            .quote-text {
+                font-size: 24px;
+                left: 5%;
+            }
+            .explore-btn {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 36px;
+                left: 10%;
+            }
+            .quote-text {
+                font-size: 18px;
+                left: 10%;
+            }
+            .explore-btn {
+                font-size: 18px;
+                padding: 8px 16px;
+            }
+        } 
+        .about-section {
+        min-height: 100vh; /* Full screen height */
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-family: Helvetica, sans-serif;
+        color: #333;
+        margin-top: 100vh; /* Pushes it below the first section */
+    } 
+    .about-section {
+    min-height: 100vh; /* Full screen height */
+    background: url('resort10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    position: relative; /* Allows precise positioning */
+    color: white;
+    font-family: "Times New Roman", serif;
+    margin-top: 100vh;
+} 
+
+.about-section {
+  min-height: 100vh;
+  background: url('resort10.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 40px 20px;
+  color: white;
+  font-family: "Times New Roman", serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.offer-title {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.img-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.img-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.img-card:hover img {
+  transform: scale(1.05);
+}
+
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.img-overlay .always-visible {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.img-overlay .hover-description {
+  font-size: 14px;
+  margin-top: 6px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.img-card:hover .hover-description {
+  opacity: 1;
+  max-height: 80px;
+}
+
+
+.explore-btn-side {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.explore-btn-side:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .explore-btn-side {
+    margin-top: 20px;
+  }
+} 
+
+.gallery-section {
+  position: relative;  /* Needed for absolute positioning inside */
+  background: white;
+  padding: 60px 20px 100px; /* Extra bottom padding so content and quote don't overlap */
+  text-align: center;
+}
+
+.gallery-quote {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-style: italic;
+  font-family: "Times New Roman", serif;
+  color: #2a7a2a; /* Green shade */
+  font-size: 16px;
+  white-space: nowrap; /* Prevent line breaks */
+  user-select: none;
+  opacity: 0.8;
+}
+
+
+
+.gallery-title {
+  color: #2e652e; /* A pleasant shade of green */
+  font-family: Georgia, serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .gallery-images img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-images img {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+.coffee-section {
+  background: white;
+  min-height: 300px; /* Adjust as needed */
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.coffee-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 900px;
+}
+
+.coffee-text {
+  flex: 1;
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  color: #333;
+  padding-right: 40px;
+}
+
+.coffee-img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 300px; /* Control image height */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .coffee-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .coffee-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .coffee-img {
+    max-height: 250px;
+  }
+} 
+
+.wedding-section {
+  background: url('weddingpic.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 60px 40px; /* Increased top padding to raise the text */
+  box-sizing: border-box;
+}
+
+.wedding-quote {
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-size: 32px;
+  color: white;
+  text-align: right;
+  margin-bottom: 60px; /* Moves it a bit higher from the bottom */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .wedding-quote {
+    font-size: 24px; 
+    margin-bottom : 40px;
+  }
+} 
