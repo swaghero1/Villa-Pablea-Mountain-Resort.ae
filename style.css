@@ -1,6 +1,6 @@
  
 .hero-section {
-  background-image: url('resort13`.jpg');
+  background-image: url('resort14.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,27 +155,7 @@
                 padding: 8px 16px;
             }
         } 
-        .about-section {
-        min-height: 100vh; /* Full screen height */
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        font-family: Helvetica, sans-serif;
-        color: #333;
-        margin-top: 100vh; /* Pushes it below the first section */
-    } 
-    .about-section {
-    min-height: 100vh; /* Full screen height */
-    background: url('resort10.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    position: relative; /* Allows precise positioning */
-    color: white;
-    font-family: "Times New Roman", serif;
-    margin-top: 100vh;
-} 
+        
 
 .about-section {
   min-height: 100vh;

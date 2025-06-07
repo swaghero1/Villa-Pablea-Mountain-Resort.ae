@@ -170,28 +170,9 @@
                 padding: 8px 16px;
             }
         } 
-        .about-section {
-        min-height: 100vh; /* Full screen height */
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        font-family: Helvetica, sans-serif;
-        color: #333;
-        margin-top: 100vh; /* Pushes it below the first section */
-    } 
-    .about-section {
-    min-height: 100vh; /* Full screen height */
-    background: url('resort10.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    position: relative; /* Allows precise positioning */
-    color: white;
-    font-family: "Times New Roman", serif;
-    margin-top: 100vh;
-} 
-
+       
+    
+    
 .about-section {
   min-height: 100vh;
   background: url('resort10.jpg') no-repeat center center fixed;
@@ -204,7 +185,31 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+} 
+
+
+
+
+
+
+
+/* Ensuring the scroll effect remains on mobile */
+@media (max-width: 768px) {
+  .about-section {
+    background-attachment: fixed; /* Keep scrolling effect */
+    padding: 20px; /* Adjust padding for smaller screens */
+    text-align: center; /* Center text content */
+  }
 }
+
+/* Fine-tuning layout for iPhone Minis */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 15px;
+    justify-content: center; /* Center content vertically */
+  }
+}
+
 
 .offer-title {
   font-size: 36px;
