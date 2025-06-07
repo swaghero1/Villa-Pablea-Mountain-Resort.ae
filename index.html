@@ -321,10 +321,30 @@
   font-style: italic;
   font-family: "Times New Roman", serif;
   color: #2a7a2a; /* Green shade */
-  font-size: 16px;
+  font-size: 14px;
   white-space: nowrap; /* Prevent line breaks */
   user-select: none;
   opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-quote {
+    font-size: 12px; /* Slightly smaller for tablets */
+    left: 15px; /* Adjust positioning */
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-quote {
+    font-size: 10px; /* Smaller for mobile */
+    left: 10px;
+    bottom: 10px;
+    text-align: center; /* Center for very small screens */
+    white-space: normal; /* Allow wrapping on smaller screens */
+    max-width: 80%; /* Prevent overflow issues */
+  }
 }
 
 
@@ -413,7 +433,7 @@
   .coffee-text {
     padding-right: 0;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 17px;
   }
   .coffee-img {
     max-height: 250px;
