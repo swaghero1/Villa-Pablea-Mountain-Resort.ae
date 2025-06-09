@@ -538,6 +538,124 @@ mark.search-highlight {
   #searchInput {
   position: relative;
   z-index: 10;
+} 
+
+/* Contact Us Section - Darker Theme */
+.contact-section {
+    background-color: #212529; /* Very dark grey, almost black */
+    padding: 80px 20px;
+    font-family: "Times New Roman", serif;
+    color: #dee2e6; /* Default text color for the section */
 }
+
+.contact-title {
+    color: #e9ecef; /* Light grey for main heading */
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-family: Georgia, serif;
+}
+
+.contact-info-card {
+    background-color: #343a40; /* Dark grey for card background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px #7ef9ff; /* Stronger shadow for depth */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info-card h3 {
+    color: #ffffff; /* White for card subheadings */
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-info-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dee2e6; /* Light grey for paragraph text */
+    margin-bottom: 10px;
+}
+
+.contact-info-card p i {
+    margin-right: 10px;
+    color: #28a745; /* A vibrant green for icons to stand out */
+}
+
+.contact-info-card hr {
+    border-top: 1px solid #495057; /* Darker line for separator */
+    margin: 25px 0;
+}
+
+.map-placeholder {
+    background-color: #343a40; /* Same dark grey as card background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #7ef9ff; /* Stronger shadow for depth */
+    height: 100%;
+}
+
+.map-placeholder iframe {
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* Responsive adjustments remain the same for functionality */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 15px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .contact-info-card,
+    .map-placeholder {
+        padding: 25px;
+    }
+
+    .contact-info-card h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .contact-info-card p {
+        font-size: 16px;
+    }
+
+    .map-placeholder iframe {
+      height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 40px 10px;
+    }
+    .contact-title {
+        font-size: 28px;
+    }
+    .contact-info-card,
+    .map-placeholder {
+        padding: 20px;
+    }
+    .contact-info-card p {
+        font-size: 15px;
+    }
+     .map-placeholder iframe {
+      height: 250px;
+    }
+} 
+
+
+
+
 
 
