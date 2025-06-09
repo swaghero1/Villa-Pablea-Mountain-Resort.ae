@@ -541,11 +541,14 @@ mark.search-highlight {
 } 
 
 /* Contact Us Section - Darker Theme */
-.contact-section {
+.contact-section { 
+  
+    min-height: 100vh;
     background-color: #212529; /* Very dark grey, almost black */
     padding: 80px 20px;
     font-family: "Times New Roman", serif;
-    color: #dee2e6; /* Default text color for the section */
+    color: #dee2e6; /* Default text color for the section */ 
+    
 }
 
 .contact-title {
