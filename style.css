@@ -434,3 +434,110 @@
     margin-bottom : 40px;
   }
 } 
+
+.room-rates-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  font-family: Georgia, serif;
+}
+
+.container-custom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.left-title {
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.room-rates-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  border-left: 6px solid #2980b9;
+  padding-left: 1rem;
+  line-height: 1.2;
+}
+
+.right-content {
+  flex: 2 1 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.room-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+} 
+
+.lol-card {
+  background-color: #16284b;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.room-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.room-card h4 {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.room-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1b4b72;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .room-rates-heading {
+    font-size: 3rem;
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 4px solid #2980b9;
+    padding-bottom: 0.5rem;
+  }
+
+  .right-content {
+    grid-template-columns: 1fr;
+  }
+} 
+
+
+mark.search-highlight {
+  background-color: yellow;
+  color: black;
+  padding: 0 2px;
+  border-radius: 3px; } 
+
+  #searchInput {
+  position: relative;
+  z-index: 10;
+}
+
+

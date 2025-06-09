@@ -10,9 +10,10 @@
     <meta property="og:title" content="Villa Pablea - Your Dream Resort">
     <meta property="og:description" content="Experience the beauty of Villa Pablea, a top-tier resort destination.">
     <meta property="og:image" content="resort14.png">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel ="stylesheet" href = "style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
     </head> 
     <style>
        
@@ -87,6 +88,8 @@
 
         .navbar {
             background: rgba(255, 255, 255, 0.6);
+            position: relative; /* Ensures z-index takes effect */
+            z-index: 1000;   /* A high value to put it on top of other content */
         }
         .navbar-brand {
             display: flex;
@@ -488,37 +491,38 @@
     </style>
 </head>
 <body>
-    <section class="hero-section" id = "herosection">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" aria-label="Villa Pablea Resort Home">
-                <img src="resort16-modified.png" alt="Villa Pablea Logo">
-                Villa Pablea
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="herosection" aria-label="Go to Home page">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" aria-label="Learn more About Us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" aria-label="Contact Villa Pablea">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <section class="hero-section" id="herosection">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" aria-label="Villa Pablea Resort Home">
+        <img src="resort16-modified.png" alt="Villa Pablea Logo">
+        Villa Pablea
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="#herosection" aria-label="Go to Home page">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="Learn more About Us">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="Contact Villa Pablea">Contact Us</a></li>
+        </ul>
 
-    <!-- Resort Title -->
-    <div class="hero-text">Villa Pablea Mountain Resort</div>
+        <form class="d-flex" role="search">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="searchSubmitButton" class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Resort Quote -->
-    <div class="quote-text">- because this isn’t just a vacation, it's an escape.</div>
+  <div class="hero-text">Villa Pablea Mountain Resort</div> 
 
-    <!-- Explore Button -->
-    <a href="#" class="explore-btn">Explore</a>
+  <div class="quote-text">- because this isn’t just a vacation, it's an escape.</div>
 
+  <a href="#" class="explore-btn">Explore</a>
+</section>
 
-</section> 
 
 <section id="about-section" class="about-section">
   <h2 class="offer-title">WHAT WE OFFER</h2>
@@ -527,7 +531,7 @@
   <div class="img-card">
     <img src="resort1.jpg" alt="Swimming Pool">
     <div class="img-overlay">
-      <h5 class="always-visible">Swimming Pool</h5>
+      <h5 class="always-visible">SwimmingPool</h5>
       <p class="hover-description">Enjoy our crystal-clear pool perfect for relaxation and fun.</p>
     </div>
   </div>
@@ -548,13 +552,13 @@
   <div class="img-card">
     <img src="resort3.jpg" alt="Park & Rooms">
     <div class="img-overlay">
-      <h5 class="always-visible">Park & Room Accommodations</h5>
+      <h5 class="always-visible">Venues For Rent</h5>
       <p class="hover-description">Spacious areas for picnics and relaxing room stays.</p>
     </div>
   </div>
 </div>
 
-<a href="#" class="explore-btn-side">Check Prices</a>
+<a href="#searchableContent" class="explore-btn-side">Check Prices</a>
 
 </section> 
 
@@ -576,7 +580,74 @@
     <p class="coffee-text">Enjoy your morning coffee with nature and relaxation</p>
     <img src="resortcoffee.jpg" alt="Morning coffee with nature" class="coffee-img">
   </div>
-</section>
+</section> 
+
+<section class="room-rates-section" id="searchableContent">
+  <div class="container-custom">
+    <div class="left-title">
+      <h2 class="room-rates-heading">Room Rates</h2>
+    </div>
+    <div class="right-content">
+      <div class="room-card">
+        <h4>VIP ROOM 1 (for 2 pax)</h4>
+        <p>₱3,999.00</p>
+      </div>
+      <div class="room-card">
+        <h4>V.I.P. 2 (for 4 pax)</h4>
+        <p>₱4,599.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Premiere (for 2 pax)</h4>
+        <p>₱2,599.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Barkadahan 1 (for 6 pax)</h4>
+        <p>₱3,999.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Barkadahan 2 (for 12 pax)</h4>
+        <p>₱7,999.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Berber 1 (for 28 pax)</h4>
+        <p>₱18,999.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Berber 2 (for 6 pax)</h4>
+        <p>₱5,499.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Deluxe 1 (for 3 pax)</h4>
+        <p>₱2,699.00</p>
+      </div>
+      <div class="room-card">
+        <h4>Deluxe 2 (for 2 pax)</h4>
+        <p>₱1,799.00</p>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="room-rates-section" id="searchableContent">
+  <div class="container-custom">
+    <div class="left-title">
+      <h2 class="room-rates-heading">Swimming Pool Rates</h2>
+    </div>
+    <div class="right-content">
+      <div class="lol-card">
+        
+      <div class="room-card">
+        <h4>Monday - Thursday</h4>
+        <p>₱ 75</p>
+      </div>
+      <div class="room-card">
+        <h4>Friday - Sunday/ Holidays</h4>
+        <p>₱ 100</p>
+      </div>
+    </div>
+  </div>
+</section> 
+
 
 <section id="wedding-section" class="wedding-section">
   <div class="wedding-quote">Celebrate your love, with us</div>
@@ -585,7 +656,68 @@
 
 
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector('form[role="search"]');
+  const input = document.querySelector('#searchInput');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent page reload on form submission
+
+    const query = input.value.trim().toLowerCase();
+
+    // Remove any previous highlights from the entire document
+    document.querySelectorAll('.search-highlight').forEach(mark => {
+      const parent = mark.parentNode;
+      // Replace the <mark> tag with its text content
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      // Normalize the parent to merge adjacent text nodes (prevents empty nodes)
+      parent.normalize(); 
+    });
+
+    if (!query) {
+      // If the query is empty, just clear highlights and do nothing else
+      return; 
+    }
+
+    // Select elements to search within. This includes headings, paragraphs, and other text-containing tags.
+    // You can customize this list based on where you expect searchable text to be.
+    const elementsToSearch = document.body.querySelectorAll('h1, h2, h3, h4, h5, p, a, span, div:not(.navbar):not(.form-control)'); 
+    let found = false;
+
+    elementsToSearch.forEach(el => {
+      // Check if the element has no child elements (to avoid breaking HTML structure inside)
+      // and if its text content contains the query.
+      if (el.children.length === 0 && el.textContent.toLowerCase().includes(query)) {
+        found = true;
+
+        // Use a regex to find all occurrences of the query (case-insensitive, global)
+        // The replace method inserts <mark> tags around the found text.
+        // `replace(/[.*+?^${}()|[\]\\]/g, '\\$&')` escapes special characters in the query
+        const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        el.innerHTML = el.textContent.replace(regex, '<mark class="search-highlight">$1</mark>');
+      }
+    });
+
+    if (found) {
+      // Optionally, scroll to the first highlighted item if needed.
+      // For a general page search, you might not want to automatically scroll to the first match
+      // or you might want to implement a "next/previous" match navigation.
+      // For now, let's just make sure the page is at the top if no specific scroll is intended.
+      const firstHighlight = document.querySelector('.search-highlight');
+      if (firstHighlight) {
+        firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } else {
+      alert("No results found on the page for: " + query);
+    }
+  });
+});
+    </script>
 </body>
 </html>
